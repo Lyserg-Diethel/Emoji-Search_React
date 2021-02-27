@@ -1,0 +1,92 @@
+.App {
+  text-align: center;
+}
+
+
+.imageSpinner{
+  font-size: 800%; 
+  animation: rotate 3s infinite linear;
+  text-shadow: 1px 1px 4px #000;
+}
+
+@keyframes rotate{
+  0%{
+    transform: rotateY(0deeg);
+  }
+  100%{
+    transform:rotateY(360deg)
+  }
+}
+
+.imageSpinnerContainer{
+  position: relative;
+  width: max-content;
+  min-width: 90px;
+  margin: 2em auto;
+  border: 1px solid #dbdbdb;
+  padding: .5em;
+  border-radius: 10px;
+  transition: .3s;
+}
+
+.imageSpinnerContainer:hover{
+  background-color: rgb(215, 255, 240);
+  cursor: pointer;
+}
+.imageSpinnerContainer:hover::after{
+  content:"Click to copy";
+  text-shadow: 2px 2px 2px #fff;
+  position: absolute;
+  bottom: 2%;
+  left: 0;
+  width: 100%;
+}
+
+.mainInput{
+  width: 50vw;
+  min-width: 310px;
+  height: 7vh;
+  font-size: 3vmax;
+  margin: 0 auto 1em auto
+}
+
+.emojiContainer{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.emojiCard{
+  padding: 5px;
+  margin: 5px;
+  min-width: 138px;
+  max-width: 15vw;
+  border: 1px solid #dbdbdb;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  width: 9vw;
+}
+.emojiCard:hover{
+  background-color: #eee;
+  cursor: pointer;
+}
+
+.emojiTitle{
+  margin:0;
+}
+
+
+@media(min-width:1921px){
+  .emojiCard{
+    font-size: .8vmax;
+  }
+  .imageSpinner{
+    font-size: 10vmin;
+  }
+  .mainInput{
+    border:.2vmin solid #dbdbdb;
+  }
+}
